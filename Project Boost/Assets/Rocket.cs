@@ -30,10 +30,12 @@ public class Rocket : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             Debug.Log("Rotating Right.");
+            this.transform.Rotate(Vector3.right);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             Debug.Log("Rotating Left.");
+            this.transform.Rotate(Vector3.left);
         }
     }
 }
