@@ -59,4 +59,13 @@ public class Rocket : MonoBehaviour
             rb.AddRelativeForce(Vector3.up*thrustThisFrame);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(!collision.gameObject.CompareTag("Friendly"))
+        {
+            //If collision is not a friendly object, then negative impacts occur.
+            Debug.Log("Rocket collided with a non-friendly object.");
+        }
+    }
 }
